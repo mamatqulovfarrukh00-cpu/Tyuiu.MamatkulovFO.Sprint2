@@ -1,6 +1,11 @@
-﻿using Tyuiu.MamatkulovFO.Sprint2.Task0.V16.Lib;
+﻿using System;
+using Tyuiu.MamatkulovFO.Sprint2.Task0.V16.Lib;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task0.V16;
-    class Program
+   
+
+
+
+class Program
     {
         static void Main(string[] args)
         {
@@ -29,5 +34,5 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task0.V16;
         }
 
 
-    }
+}
 

@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task0.V16.Lib;
 
 public class DataService : ISprint2Task0V16
