@@ -7,16 +7,16 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task1.V3.Lib
         {
             return new bool[]
             {
-            (c == d) && ((a + b) > 400),
-            ((a - c) == 51) && (b < 300),
-            (a > b) | (c != d),
-            ((b - a) > 130) & (d == 135),
-            !(a == 185) || (c < d),
-            ((a + c) >= 320) | (b <= 300)
+            c == d,
+            (a == 185) ^ true,
+            (b == 316) & false,
+            c != 134,
+            !(d == 134),
+            a > 200
             };
         }
 
-        public bool[] GetLogicOperations(int a, int b, int c, int d)
+        bool[] ISprint2Task1V3.GetLogicOperations(int a, int b, int c, int d)
         {
             throw new NotImplementedException();
         }
