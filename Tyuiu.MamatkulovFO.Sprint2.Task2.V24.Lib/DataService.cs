@@ -2,7 +2,7 @@
 namespace Tyuiu.MamatkulovFO.Sprint2.Task2.V24.Lib
 {
   
-    public class DataService
+    public class DataService:ISprint2Task2V24
     {
         /// <summary>
         /// Проверяет, находится ли точка (x, y) в заштрихованной области.
@@ -20,6 +20,11 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task2.V24.Lib
 
             // Точка считается попавшей в область, если выполняется хотя бы одно условие
             return inCircle || inFirstQuadrant;
+        }
+
+        bool ISprint2Task2V24.CheckDotInShadedArea(int x, int y)
+        {
+            throw new NotImplementedException();
         }
     }
 }
