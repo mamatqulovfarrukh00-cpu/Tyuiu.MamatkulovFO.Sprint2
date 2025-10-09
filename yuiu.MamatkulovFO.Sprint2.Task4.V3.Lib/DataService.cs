@@ -10,6 +10,11 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task4.V3.Lib
                 : x + 2 * y * (1.0 / (y + 3));
         }
 
+        public double CalculateZ(double x, double y)
+        {
+            throw new NotImplementedException();
+        }
+
         double ISprint2Task4V3.Calculate(double x, double y)
         {
             throw new NotImplementedException();
