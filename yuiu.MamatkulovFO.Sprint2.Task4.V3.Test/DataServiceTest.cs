@@ -1,7 +1,4 @@
-﻿using Tyuiu.MamatkulovFO.Sprint2.Task4.V3;
-
-using Tyuiu.MamatkulovFO.Sprint2.Task4.V3.Lib;
-
+﻿using Tyuiu.MamatkulovFO.Sprint2.Task4.V3.Lib;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task4.V3.Test
 {
     [TestClass]
