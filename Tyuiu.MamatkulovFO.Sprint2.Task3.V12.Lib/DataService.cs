@@ -18,7 +18,7 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task3.V12.Lib
         /// 
         /// Результат округляется до 3 знаков после запятой.
         /// </summary>
-        public class DataService : IDataService
+        public class DataService : ISprint2Task3V12
         {
             public double CalculateY(double x)
             {
@@ -51,6 +51,11 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task3.V12.Lib
                 }
 
                 return Math.Round(y, 3);
+            }
+
+            double ISprint2Task3V12.Calculate(double x)
+            {
+                throw new NotImplementedException();
             }
         }
     }
