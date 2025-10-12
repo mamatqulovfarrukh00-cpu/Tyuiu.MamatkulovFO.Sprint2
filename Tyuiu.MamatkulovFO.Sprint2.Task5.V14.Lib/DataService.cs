@@ -1,50 +1,39 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using System.Globalization;
+using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14.Lib
 { 
     public class DataService:ISprint2Task5V14
     {
-        // Массив дней недели: 0 = понедельник, 6 = воскресенье
-        private readonly string[] _days = {
-        "понедельник", "вторник", "среда",
-        "четверг", "пятница", "суббота", "воскресенье"
-    };
+        public string GetDayOfWeek(int v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
 
-        // Запуск интерактивного режима
+        public string Run(int k, int d)
+        {
+            // 1 yanvar d-kun (1=Dushanba, 7=Yakshanba)
+            // k - yilning nechanchi kuni
+
+            // Kunlarni hisoblash: (d + k - 1) % 7
+            int dayIndex = (d + k - 1) % 7;
+            if (dayIndex == 0) dayIndex = 7; // 0 -> 7 (Yakshanba)
+
+            // Rus tilida kun nomini qaytarish
+            var culture = new CultureInfo("ru-RU");
+            var dayName = ((DayOfWeek)(dayIndex - 1)).ToString("dddd", culture);
+
+            return dayName;
+        }
+
         public void Run()
         {
-            Console.WriteLine("=== Определение дня недели ===");
-
-            int k = ReadInput("Введите номер дня в году (1–365): ", 1, 365);
-            if (k == -1) return;
-
-            int d = ReadInput("Введите день недели 1 января (1=пн, 7=вс): ", 1, 7);
-            if (d == -1) return;
-
-            string result = GetDayOfWeek(k, d);
-            Console.WriteLine($"{k}-й день года — это {result}.");
+            throw new NotImplementedException();
         }
 
-        // Безопасное чтение целого числа в заданном диапазоне
-        private int ReadInput(string prompt, int min, int max)
-        {
-            Console.Write(prompt);
-            if (int.TryParse(Console.ReadLine(), out int value) && value >= min && value <= max)
-                return value;
-
-            Console.WriteLine($"Ошибка: введите число от {min} до {max}.");
-            return -1;
-        }
-
-        // Вычисление дня недели (имитация switch через массив)
-        public string GetDayOfWeek(int k, int d)
-        {
-            int index = (d - 1 + k - 1) % 7; // смещение от понедельника
-            return _days[index];
-        }
-
-        public string FindDayName(int k, int d)
+        string ISprint2Task5V14.FindDayName(int k, int d)
         {
             throw new NotImplementedException();
         }
     }
 }
+
