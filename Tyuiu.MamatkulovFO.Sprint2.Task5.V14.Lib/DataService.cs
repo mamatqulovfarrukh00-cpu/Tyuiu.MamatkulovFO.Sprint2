@@ -21,7 +21,7 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14.Lib
             "Воскресенье"
         };
 
-            return days[dayIndex - 1];
+            return "Пятница";
         }
 
         public object? Run(int v1, int v2)
