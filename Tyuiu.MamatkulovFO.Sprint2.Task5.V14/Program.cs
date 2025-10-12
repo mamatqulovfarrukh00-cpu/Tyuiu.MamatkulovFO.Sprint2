@@ -6,7 +6,7 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14
         static void Main()
         {
             var service = new DataService();
-            System.Console.WriteLine(service.Run(20, 7));
+            Console.WriteLine(service.Run(20, 7));
         }
     }
 
