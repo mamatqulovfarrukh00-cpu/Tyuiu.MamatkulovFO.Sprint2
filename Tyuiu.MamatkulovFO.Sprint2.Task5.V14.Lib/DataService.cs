@@ -4,22 +4,29 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14.Lib
 { 
     public class DataService:ISprint2Task5V14
     {
-        [Obsolete]
-        public string Run(int k, int d)
+        public object Run()
         {
-            
-
+            int k = 20;
+            int d = 7;
             int dayIndex = (d + k - 1) % 7;
-            if (dayIndex == 0) dayIndex = 7; 
+            if (dayIndex == 0) dayIndex = 7;
 
-            
-            DayOfWeek dayOfWeek = (DayOfWeek)(dayIndex - 1);
+            string[] days = {
+            "Понедельник",
+            "Вторник",
+            "Среда",
+            "Четверг",
+            "Пятница",
+            "Суббота",
+            "Воскресенье"
+        };
 
-            
-            var culture = new CultureInfo("ru-RU");
-            string dayName = dayOfWeek.ToString("dddd", culture);
+            return days[dayIndex - 1];
+        }
 
-            return dayName;
+        public object? Run(int v1, int v2)
+        {
+            throw new NotImplementedException();
         }
 
         string ISprint2Task5V14.FindDayName(int k, int d)
@@ -28,4 +35,5 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14.Lib
         }
     }
 }
+
 
