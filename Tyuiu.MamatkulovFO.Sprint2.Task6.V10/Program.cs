@@ -1,4 +1,4 @@
-﻿using Tyuiu.MamatkulovFO.Sprint2.Task6.V10.LIb;
+﻿using Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Lib;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10
 {
     class Program

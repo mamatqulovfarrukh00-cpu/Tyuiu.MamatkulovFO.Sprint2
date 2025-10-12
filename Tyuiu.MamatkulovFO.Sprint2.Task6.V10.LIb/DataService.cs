@@ -1,5 +1,5 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
-namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.LIb
+namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Lib
 {
     public class DataService : ISprint2Task6V10
     {
@@ -28,6 +28,7 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.LIb
 
             return $"{prevDay}.{prevMonth}.{prevYear}";
         }
+
         string ISprint2Task6V10.FindDateOfPreviousDay(int g, int m, int n)
         {
             throw new NotImplementedException();
