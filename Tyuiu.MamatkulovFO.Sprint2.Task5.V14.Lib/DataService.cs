@@ -1,7 +1,7 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14.Lib
 { 
-    public class DataService
+    public class DataService:ISprint2Task5V14
     {
         // Массив дней недели: 0 = понедельник, 6 = воскресенье
         private readonly string[] _days = {
@@ -40,6 +40,11 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task5.V14.Lib
         {
             int index = (d - 1 + k - 1) % 7; // смещение от понедельника
             return _days[index];
+        }
+
+        public string FindDayName(int k, int d)
+        {
+            throw new NotImplementedException();
         }
     }
 }
