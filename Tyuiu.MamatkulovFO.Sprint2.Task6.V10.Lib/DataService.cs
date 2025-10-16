@@ -1,4 +1,4 @@
-﻿
+﻿using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Lib;
 
 public class DataService:ISprint2Task6V10
