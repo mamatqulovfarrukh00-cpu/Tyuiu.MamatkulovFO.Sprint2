@@ -56,9 +56,6 @@ public class DataService:ISprint2Task6V10
         return (year - 1, 12, 31);
     }
 
-    string ISprint2Task6V10.FindDateOfPreviousDay(int g, int m, int n)
-    {
-        throw new NotImplementedException();
-    }
+   
 }
 
