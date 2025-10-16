@@ -8,7 +8,7 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Test;
         [Fact]
         public void Test_October16_ReturnsOctober15()
         {
-            var result = DataService.GetPreviousDay(2025, 10, 16);
+        var result = DataService.GetPreviousDay(2025, 10, 16);
             Assert.AreEqual((2025, 10, 15), result);
         }
 
