@@ -1,37 +1,61 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
-namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Lib
+﻿
+namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Lib;
+
+public class DataService:ISprint2Task6V10
 {
-    public class DataService : ISprint2Task6V10
+    public static (int Year, int Month, int Day) GetPreviousDay(int year, int month, int day)
     {
-        public string Run(int g, int m, int p)
-        {
-            int prevDay = p - 1;
-            int prevMonth = m;
-            int prevYear = g;
+        if (year <= 0 || month < 1 || month > 12 || day < 1)
+            throw new ArgumentException("Invalid date");
 
-            if (prevDay == 0)
+        int daysInMonth = month switch
+        {
+            1 => 31,
+            2 => 28,
+            3 => 31,
+            4 => 30,
+            5 => 31,
+            6 => 30,
+            7 => 31,
+            8 => 31,
+            9 => 30,
+            10 => 31,
+            11 => 30,
+            12 => 31,
+            _ => throw new ArgumentException("Invalid month")
+        };
+
+        if (day > daysInMonth)
+            throw new ArgumentException("Invalid day");
+
+        if (day > 1)
+            return (year, month, day - 1);
+
+        if (month > 1)
+        {
+            int prevMonth = month - 1;
+            int prevDay = prevMonth switch
             {
-                prevMonth--;
-                if (prevMonth == 0)
-                {
-                    prevMonth = 12;
-                    prevYear--;
-                }
-
-                switch (prevMonth)
-                {
-                    case 1: case 3: case 5: case 7: case 8: case 10: case 12: prevDay = 31; break;
-                    case 4: case 6: case 9: case 11: prevDay = 30; break;
-                    case 2: prevDay = 28; break;
-                }
-            }
-
-            return $"{prevDay}.{prevMonth}.{prevYear}";
+                1 => 31,
+                2 => 28,
+                3 => 31,
+                4 => 30,
+                5 => 31,
+                6 => 30,
+                7 => 31,
+                8 => 31,
+                9 => 30,
+                10 => 31,
+                11 => 30,
+                12 => 31,
+                _ => 31
+            };
+            return (year, prevMonth, prevDay);
         }
 
-        string ISprint2Task6V10.FindDateOfPreviousDay(int g, int m, int n)
-        {
-            throw new NotImplementedException();
-        }
+        return (year - 1, 12, 31);
     }
+
+   
 }
+
