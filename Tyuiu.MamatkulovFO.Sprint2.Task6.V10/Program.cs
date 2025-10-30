@@ -5,13 +5,21 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10
     {
         static void Main()
         {
-            Console.WriteLine("Введите год, месяц и день:");
-            int g = int.Parse(Console.ReadLine());
-            int m = int.Parse(Console.ReadLine());
-            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("=== Определение даты предыдущего дня ===");
+            Console.Write("Введите год (g): ");
+            int g = Convert.ToInt32(Console.ReadLine());
 
-            var ds = new DataService();
-            Console.WriteLine("Предыдущий день: " + ds.FindDateOfPreviousDay(g, m, n));
+            Console.Write("Введите месяц (m): ");
+            int m = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Введите число (n): ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            var service = new DataService();
+            string prevDate = service.FindDateOfPreviousDay(g, m, n);
+
+            Console.WriteLine($"Дата предыдущего дня: {prevDate}");
+            Console.ReadKey();
         }
     }
 }
