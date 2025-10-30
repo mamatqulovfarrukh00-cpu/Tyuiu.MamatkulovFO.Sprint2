@@ -1,5 +1,5 @@
 ﻿using Tyuiu.MamatkulovFO.Sprint2.Task7.V14.Lib;
-namespace Tyuiu.MamatkulovFO.Sprint2.Task7_V14
+namespace Tyuiu.MamatkulovFO.Sprint2.Task7.V14
 {
     class Program
     {

@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Reference Include="tyuiu.cources.programming.interfaces">
-      <HintPath>..\..\Tyuiu.mamatkulovFO.Sprint3\tyuiu.cources.programming.interfaces.dll</HintPath>
+      <HintPath>..\..\Tyuiu.mamatkulovFO.Sprint2\tyuiu.cources.programming.interfaces.dll</HintPath>
     </Reference>
   </ItemGroup>
 
