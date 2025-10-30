@@ -5,14 +5,14 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task7.V14.Lib
     {
         public bool CheckDotInShadedArea(double x, double y)
         {
-            // Проверяем, находится ли точка внутри или на границе круга
+            // Точка должна быть внутри или на границе круга
             bool inCircle = (x * x + y * y) <= 1.0;
 
-            // Проверяем, находится ли точка в I или III четверти (y >= x ИЛИ y <= -x)
-            bool inShadedQuadrants = (y >= x) || (y <= -x);
+            // Заштрихованная область — это II и IV четверти: y < x И y > -x
+            // То есть: между прямыми y = x и y = -x, но не включая их
+            bool inShadedArea = (y < x) && (y > -x);
 
-            // Точка должна быть и в круге, и в заштрихованных четвертях
-            return inCircle && inShadedQuadrants;
+            return inCircle && inShadedArea;
         }
     }
 }
