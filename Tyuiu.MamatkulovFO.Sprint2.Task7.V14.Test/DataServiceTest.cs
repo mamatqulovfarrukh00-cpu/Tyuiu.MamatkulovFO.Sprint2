@@ -1,4 +1,5 @@
-﻿namespace Tyuiu.MamatkulovFO.Sprint2.Task7.V14.Test
+﻿using Tyuiu.MamatkulovFO.Sprint2.Task7.V14.Lib;
+namespace Tyuiu.MamatkulovFO.Sprint2.Task7.V14.Test
 {
     [TestClass]
     public class DataServiceTest
