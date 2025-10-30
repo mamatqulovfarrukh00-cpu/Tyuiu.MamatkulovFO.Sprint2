@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿
+using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.MamatkulovFO.Sprint2.Task7.V14.Lib
 
 {
