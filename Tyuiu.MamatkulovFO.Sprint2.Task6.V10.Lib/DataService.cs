@@ -7,7 +7,7 @@ namespace Tyuiu.MamatkulovFO.Sprint2.Task6.V10.Lib
         
             public string FindDateOfPreviousDay(int g, int m, int n)
             {
-                int[] days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            int[] days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
                 if (n > 1) return $"{g}.{m}.{n - 1}";
 
